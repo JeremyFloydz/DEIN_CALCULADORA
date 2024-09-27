@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"es.jeremy.demofxml","l":"ControladorParaHelloView"},{"p":"es.jeremy.demofxml","l":"HelloApplication"}];updateSearchResults();

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.jeremy.demofxml.ControladorParaHelloView">
+   <children>
+      <Label layoutX="205.0" layoutY="14.0" prefHeight="47.0" prefWidth="168.0" text="Calculadora">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="92.0" prefHeight="33.0" prefWidth="117.0" text="Primer numero:" />
+      <TextField fx:id="firstNumber" layoutX="175.0" layoutY="96.0" prefHeight="24.0" prefWidth="231.0" />
+      <Label layoutX="32.0" layoutY="144.0" text="Segundo numero:" />
+      <TextField fx:id="secondNumber" layoutX="175.0" layoutY="140.0" prefHeight="24.0" prefWidth="231.0" />
+      <GridPane layoutX="176.0" layoutY="191.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <RadioButton fx:id="sumRadio" mnemonicParsing="false" text="Sumar">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grupo" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="subtractRadio" mnemonicParsing="false" text="Restar" toggleGroup="$grupo" GridPane.rowIndex="1" />
+            <RadioButton fx:id="multiplyRadio" mnemonicParsing="false" text="Multiplicar" toggleGroup="$grupo" GridPane.columnIndex="1" />
+            <RadioButton fx:id="divideRadio" mnemonicParsing="false" text="Dividir" toggleGroup="$grupo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="37.0" layoutY="284.0" prefHeight="25.0" prefWidth="110.0" text="Resultado:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="resultField" editable="false" layoutX="170.0" layoutY="284.0" prefHeight="24.0" prefWidth="238.0" />
+      <Button layoutX="157.0" layoutY="329.0" mnemonicParsing="false" onAction="#calculate" text="Calcular" />
+      <Button layoutX="300.0" layoutY="329.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="16.0" prefWidth="71.0" text="Borrar" />
+   </children>
+</AnchorPane>
